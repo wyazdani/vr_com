@@ -1,0 +1,28 @@
+@extends('mail.layout')
+@section('content')
+    <tr><td style="padding:50px 15px 0 15px;">
+            <dt style="font-weight: bold; font-size:16px; width: 80%;text-align: left;padding: 5px 15px; color: #000000">
+                Hi {!! $user->name !!},
+            </dt>
+            <dt style="font-weight: normal;width: 80%;text-align: left;padding: 5px 15px; color: #000000">
+                You have requested to reset your VRCOM password. Please use the below code to reset your password.
+            </dt>
+            <dt style="font-weight: bold;width: 80%;text-align: left;padding: 5px 15px; color: #000000">
+
+            </dt>
+            <dt style="font-weight: normal;width: 80%;text-align: left;padding: 5px 15px 30px 15px; color: #000000">
+                <b>{!! $user->forget_code !!}</b>
+            </dt>
+            <dt style="font-weight: normal;width: 80%;text-align: left;padding: 5px 15px 30px 15px; color: #000000">
+                If this request was not initiated by you, you can safely ignore this message.
+            </dt>
+            <dt style="font-weight: bold;width: 80%;text-align: left;padding:0 15px; color: #000000">
+                Regards,
+            </dt>
+
+            <dt style="font-weight: normal;width: 80%;text-align: left;padding:0 15px 20px; color: #000000">
+                Team VRCOM
+            </dt>
+        </td>
+    </tr>
+@endsection
